@@ -1,0 +1,53 @@
+{
+  "name": "nestjs-multer-fastify",
+  "version": "0.0.1",
+  "description": "Fastify Multer module for Nest framework (node.js)",
+  "author": "悠静 <i@mikuhl.cn>",
+  "license": "MIT",
+  "keywords": [
+    "nestjs",
+    "fastify",
+    "multer",
+    "file",
+    "module"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timi137137/nestjs-multer-fastify"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc -p tsconfig.json",
+    "format": "prettier --write \"{lib,example}/**/*.ts\"",
+    "prepublish:npm": "npm run lint && npm run format && npm run build",
+    "publish:npm": "npm publish --access public",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "lint": "eslint \"{lib,apps,libs,test,example/src}/**/*.ts\" --fix"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^9.0.0 || ^10.0.0",
+    "@nestjs/core": "^9.0.0 || ^10.0.0",
+    "@types/node": "20.10.7",
+    "@typescript-eslint/eslint-plugin": "6.18.1",
+    "@typescript-eslint/parser": "6.18.1",
+    "eslint": "8.56.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-prettier": "^5.1.2",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "prettier": "3.1.1",
+    "typescript": "5.3.3",
+    "reflect-metadata": "0.2.1",
+    "rimraf": "5.0.5",
+    "rxjs": "7.8.1"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^9.0.0 || ^10.0.0",
+    "@nestjs/core": "^9.0.0 || ^10.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
